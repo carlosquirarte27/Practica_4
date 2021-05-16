@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/bfa9cd9f15.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+  <body>
+    <style>
+      nav.navbar {
+      background-color: gray  !important;
+  }
+
+</style>
+  
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Registro">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#Login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#Login">Administración de usuarios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+  <div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">DASW-Practica1</h1>
+            <p class="lead">Interfaz para registro de usuarios</p>
+            <hr class="my-2">
+            <p>1.-Login </p>
+            <p>2.-Registro</p>
+            <p>3.-Consultas</p>
+            <p class="lead">
+            </p>
+            <a class="btn btn-primary btn-lg" href="#" data-toggle="modal" data-target="#Login" role="button">Ir a administracion de usuarios</a>
+        </div>
+    </div> 
+  </div> 
+
+    <!-- Modal Exito -->
+    <div class="modal fade" id="allGoodH" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">El servidor respondió correctamente! </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success" role="alert">
+              Se ha efectuado el cambio.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Excelente!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="allBadH" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Operación Incorrecta</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              Error! El Servidor No responde!
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">F... Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <!-- Modal Login-->
+  <div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form >
+        <div class="modal-body">
+          <p>Correo</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="email" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" required>
+          </div>
+          <p>Password</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fas fa-key"></i></div>
+            </div>
+            <input type="password" class="form-control"  aria-label="password" aria-describedby="basic-addon1" required>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary" type="submit" id = "LB" disabled>Entrar</button>
+      </div>
+    </form>
+      <div class="modal-footer">
+        ¿No tienes cuenta? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#Registro">Regístrate aquí</a>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <!-- Modal Registro-->
+    <div class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Registrar usuario</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          <div class="modal-body" id ="bodyR">
+            <form id="FR">
+            <div class = "form-row">
+              <div class="col-6">
+                <input type="text" id="Rnombre" pattern="[a-zA-Z ]+" class="form-control" placeholder="Nombre o nombres" required>
+              </div>
+              <div class="col-6">
+                <input type="text" id="Rapellido" pattern="[a-zA-Z ]+" class="form-control" placeholder="Apellido o apellidos" required>
+              </div>
+              <input type="email" id="Remail" class="form-control my-3" placeholder="Tu correo" required>
+              <input type="password" id="Rp1" pattern="[\w]{6,}" class="form-control my-3" placeholder="Contraseña" required>
+              <input type="password" id="Rp2" pattern="[\w]{6,}" class="form-control my-3" placeholder="Confirmar contraseña" required>
+              <input type="date" id="Rdate" class="form-control my-3" placeholder="1990-01-01" max="2005-01-01" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+            </div>
+              <div class="card my-3">
+                <div class="card-body py-0">
+                    <input type="radio" id="mujer" name="genero" class="m-0" value = "M" required>
+                    <label for="mujer">Mujer</label>
+                    <br>
+                    <input type="radio" id="hombre" name="genero" class="m-0" value = "H" required>
+                    <label for="hombre">Hombre</label>
+                </div>
+            </div>
+            <input class="form-control my-3" id="Rimage" placeholder="Url de imagen de perfil" required>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="RB" disabled>Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="Home.js"> </script>
+  </body>
+  
+  </html>
